@@ -23,3 +23,8 @@ CMakeLists.txt.user
 cmake-build-debug/
 .idea/
 /.vs/
+/contrib/ScriptsConverter/.vs
+/contrib/ScriptsConverter/ScriptConverter/bin
+/contrib/ScriptsConverter/Backup
+/contrib/ScriptsConverter/ScriptConverter/obj/Debug
+/contrib/ScriptsConverter/ScriptConverter/obj/Release
