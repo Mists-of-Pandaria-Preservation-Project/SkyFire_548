@@ -134,7 +134,7 @@ void WorldSession::HandleGMTicketUpdateOpcode(WorldPacket& recvData)
         response = GMTicketResponse::GMTICKET_RESPONSE_UPDATE_SUCCESS;
     }
 
-    sTicketMgr->SendGmTicketUpdate(SMSG_GM_TICKET_UPDATE_TEXT, response, GetPlayer());
+    sTicketMgr->SendGmTicketUpdate(SMSG_GM_TICKET_UPDATE, response, GetPlayer());
 }
 
 void WorldSession::HandleGMTicketDeleteOpcode(WorldPacket& /*recvData*/)
