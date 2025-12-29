@@ -111,8 +111,7 @@ int Master::Run()
 {
     BigNumber seed1;
     seed1.SetRand(16 * 8);
-
-    SF_LOG_INFO("server.authserver", "worldserver-daemon. revision: % s", VER_PRODUCTVERSION_STR);
+    SF_LOG_INFO("server.worldserver", "worldserver-daemon. revision: % s", VER_PRODUCTVERSION_STR);
     SF_LOG_INFO("server.worldserver", "<Ctrl-C> to stop.\n");
 
     SF_LOG_INFO("server.worldserver", "   ______  __  __  __  __  ______ __  ______  ______ ");
@@ -120,7 +119,7 @@ int Master::Run()
     SF_LOG_INFO("server.worldserver", "  \\ \\___  \\ \\  _'-\\ \\____ \\ \\  __\\ \\ \\ \\  __<\\ \\  __\\ ");
     SF_LOG_INFO("server.worldserver", "   \\/\\_____\\ \\_\\ \\_\\/\\_____\\ \\_\\  \\ \\_\\ \\_\\ \\_\\ \\_____\\ ");
     SF_LOG_INFO("server.worldserver", "    \\/_____/\\/_/\\/_/\\/_____/\\/_/   \\/_/\\/_/ /_/\\/_____/ ");
-    SF_LOG_INFO("server.worldserver", "  Project SkyFireEmu 2011 - 2025(c) Open-sourced Game Emulation ");
+    SF_LOG_INFO("server.worldserver", "  %s Open-sourced Game Emulation", VER_LEGALCOPYRIGHT_STR);
     SF_LOG_INFO("server.worldserver", "           <http://www.projectskyfire.org/> \n");
 
     ///- Check the version of the configuration file
