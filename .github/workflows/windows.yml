@@ -58,7 +58,6 @@ jobs:
       
       run: |
         cd $GITHUB_WORKSPACE
-        
         mkdir -p build && cd build
         cmake .. -DTOOLS=ON-A x64
         cmake --build . --config RelWithDebInfo --parallel 4
