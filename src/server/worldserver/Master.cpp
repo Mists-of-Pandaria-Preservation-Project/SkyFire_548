@@ -112,8 +112,7 @@ int Master::Run()
     BigNumber seed1;
     seed1.SetRand(16 * 8);
 
-    //TODO: FIX ME revision
-    //SF_LOG_INFO("server.worldserver", "%s (worldserver-daemon)", _FULLVERSION);
+    SF_LOG_INFO("server.authserver", "worldserver-daemon. revision: % s", VER_PRODUCTVERSION_STR);
     SF_LOG_INFO("server.worldserver", "<Ctrl-C> to stop.\n");
 
     SF_LOG_INFO("server.worldserver", "   ______  __  __  __  __  ______ __  ______  ______ ");
@@ -295,8 +294,7 @@ int Master::Run()
         LoginDatabase.DirectPExecute("UPDATE realmlist SET flag = flag & ~%u, population = 0 WHERE id = '%u'", REALM_FLAG_INVALID, itr->first);
     }
 
-    //TODO: FIX ME revision.
-    //SF_LOG_INFO("server.worldserver", "%s (worldserver-daemon) ready...", _FULLVERSION);
+    SF_LOG_INFO("server.worldserver",  " % s (worldserver-daemon) ready...", VER_PRODUCTVERSION_STR);
 
     // when the main thread closes the singletons get unloaded
     // since worldrunnable uses them, it will crash if unloaded after master
@@ -529,8 +527,7 @@ bool Master::_StartDB()
     ClearOnlineAccounts();
 
     ///- Insert version info into DB
-    //TODO: FIX ME revision
-    //WorldDatabase.PExecute("UPDATE version SET core_version = '%s', core_revision = '%s'", _FULLVERSION, _HASH);        // One-time query
+    WorldDatabase.PExecute("UPDATE version SET core_version = '%s', core_revision = '%s'", VER_PRODUCTVERSION_STR, _HASH);        // One-time query
 
     sWorld->LoadDBVersion();
 

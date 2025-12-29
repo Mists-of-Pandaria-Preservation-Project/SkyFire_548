@@ -953,12 +953,12 @@ void WorldSession::HandlePlayerLogin(LoginQueryHolder* holder)
         SF_LOG_DEBUG("network", "WORLD: Sent motd (SMSG_MOTD)");
 
         // send server info
-        //TODO: FIX ME
-        /*
         if (sWorld->getIntConfig(WorldIntConfigs::CONFIG_ENABLE_SINFO_LOGIN) == 1)
         {
-            chH.PSendSysMessage(_FULLVERSION);
-        }*/
+            chH.PSendSysMessage("Open Source Emulation https://www.projectskyfire.org");
+            chH.PSendSysMessage("www.github.com/ProjectSkyfire/SkyFire_548");
+            chH.PSendSysMessage("revision: %s", VER_PRODUCTVERSION_STR);
+        }
 
         SF_LOG_DEBUG("network", "WORLD: Sent server info");
     }

@@ -208,8 +208,7 @@ extern int main(int argc, char** argv)
         return 1;
     }
 
-    //TODO: FIX ME revision.
-    //SF_LOG_INFO("server.authserver", "%s (authserver)", _FULLVERSION);
+    SF_LOG_INFO("server.authserver", "authserver-daemon. revision: % s", VER_PRODUCTVERSION_STR);
     SF_LOG_INFO("server.authserver", "<Ctrl-C> to stop.\n");
 
     SF_LOG_INFO("server.authserver", "   ______  __  __  __  __  ______ __  ______  ______ ");

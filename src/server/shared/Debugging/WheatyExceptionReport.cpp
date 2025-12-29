@@ -440,7 +440,7 @@ void WheatyExceptionReport::GenerateExceptionReport(
 
     // Start out with a banner
     //TODO: FIX ME revision.
-    //_tprintf(_T("Revision: %s\r\n"), _FULLVERSION);
+    _tprintf(_T("Revision: %s\r\n"), VER_PRODUCTVERSION_STR);
     _tprintf(_T("Date %u:%u:%u. Time %u:%u \r\n"), systime.wDay, systime.wMonth, systime.wYear, systime.wHour, systime.wMinute);
     PEXCEPTION_RECORD pExceptionRecord = pExceptionInfo->ExceptionRecord;
 
