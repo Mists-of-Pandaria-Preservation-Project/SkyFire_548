@@ -1070,10 +1070,10 @@ Motd = "Welcome to a SkyFire server."
 #
 #    Server.LoginInfo
 #        Description: Display core version (.server info) on login.
-#        Default:     0 - (Disabled)
-#                     1 - (Enabled)
+#        Default:     1 - (Enabled)
+#                     0 - (Disabled)
 
-Server.LoginInfo = 0
+Server.LoginInfo = 1
 
 #
 #    Command.LookupMaxResults
@@ -2709,7 +2709,7 @@ UI.ShowQuestLevelsInDialogs = 0
 #                         Example:  536870912 (512 mb)
 #
 
-Appender.Console=1,3,0
+Appender.Console=1,3,0, 13 11 9 5 3 1
 Appender.Server=2,2,0,Server.log,w
 Appender.GM=2,2,15,gm/gm_%s.log
 Appender.DBErrors=2,2,0,DBErrors.log
