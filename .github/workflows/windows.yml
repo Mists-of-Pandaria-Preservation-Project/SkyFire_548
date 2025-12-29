@@ -51,9 +51,10 @@ jobs:
 
     #build and install
     - name: windows build & install
+    env:
+      OPENSSL_ROOT_DIR: C:\Program Files\OpenSSL\
       run: |
         cd $GITHUB_WORKSPACE
-        
         mkdir -p build && cd build
         cmake .. -DTOOLS=ON-A x64
         cmake --build . --config RelWithDebInfo --parallel 4
