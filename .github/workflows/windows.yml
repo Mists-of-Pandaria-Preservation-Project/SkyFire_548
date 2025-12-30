@@ -55,7 +55,7 @@ jobs:
     
       env: 
         OPENSSL_MODULES: C:\Program Files\OpenSSL\bin
-        OPENSSL_LIB_LEGACY-NOTFOUND: C:\Program Files\OpenSSL\bin
+        OPENSSL_LIB_LEGACY: C:\Program Files\OpenSSL\bin
       
       run: |
         cd $GITHUB_WORKSPACE
