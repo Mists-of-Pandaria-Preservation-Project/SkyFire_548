@@ -2,13 +2,13 @@ name: G++13
 
 on:
   push:
-    branches: [ main, trunk, movement ]
+    branches: [ main, trunk ]
 
   pull_request:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu:24.10
 
     steps:
     - uses: actions/checkout@v2
@@ -23,19 +23,14 @@ jobs:
         sudo rm -rf /var/lib/dpkg/lock
         sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.29-1_all.deb
         sudo dpkg -i mysql-apt-config_0.8.29-1_all.deb
-
-        #OpenSSL
-        #sudo wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
-        #sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
         
-        #sudo wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl-dev_1.1.1f-1ubuntu2_amd64.deb
-        #sudo dpkg -i libssl-dev_1.1.1f-1ubuntu2_amd64.deb
-
         sudo apt update
         sudo apt-get update
-      
+        
         sudo apt-get install openssl libssl-dev
-      
+       
+        sudo apt-get install -y build-essential libstdc++-14-dev gcc-14 g++-14 autoconf libtool make cmake git-core patch wget links zip unzip unrar libmysqlclient-dev libmysql++-dev libreadline6-dev zlib1g-dev libbz2-dev libncurses5-dev libace-dev
+        
         sudo apt install gcc-13 g++-13
         export CXX=g++-13 CC=gcc-13
         
