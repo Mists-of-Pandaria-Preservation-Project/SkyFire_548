@@ -52,7 +52,11 @@ jobs:
     #build and install
     - name: windows build & install
     
-               
+    
+      env: 
+        OPENSSL_MODULES: C:\Program Files\OpenSSL\bin
+        OPENSSL_LIB_LEGACY: C:\Program Files\OpenSSL\lib\VC\x64\MD\liblegacy.lib
+      
       run: |
         cd $GITHUB_WORKSPACE
         mkdir -p build && cd build
