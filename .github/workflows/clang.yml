@@ -26,7 +26,6 @@ jobs:
         cd ACE_wrappers/
         mkdir build
         cd build
-        ../configure --disable-ssl
         make -j4
         make install
      
