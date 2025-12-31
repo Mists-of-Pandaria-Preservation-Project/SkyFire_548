@@ -24,10 +24,9 @@ jobs:
         wget https://github.com/DOCGroup/ACE_TAO/releases/download/ACE%2BTAO-8_0_1/ACE+TAO-src-8.0.1.tar.gz
         tar xvzf ACE+TAO-src-8.0.1.tar.gz
         cd ACE_wrappers/
-        mkdir build
-        cd build
+        mkdir build && cd build
+        cmake ..
         make -j4
-        make install
      
         # G++
         sudo apt-get install build-essential g++ make cmake git wget libssl-dev libreadline-dev bzip2 libbz2-dev
