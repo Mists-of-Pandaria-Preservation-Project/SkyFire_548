@@ -14,15 +14,24 @@ on:
       - ready_for_review
 jobs:
   build:
-    runs-on: ubuntu:26.04
+    runs-on: ubuntu-latest
     if: ${{ !github.event.pull_request.draft }}
     steps:
     - uses: actions/checkout@v2
     - name: Dependencies
       run: |
+        #ACE
+        wget https://github.com/DOCGroup/ACE_TAO/releases/download/ACE%2BTAO-8_0_5/ACE+TAO-8.0.5.tar.gz
+        tar xvzf ACE+TAO-8.0.5.tar.gz
+        cd ACE_wrappers/
+        mkdir build
+        cd build
+        ../configure --disable-ssl
+        make -j4
+        make install
      
         # G++
-        sudo apt-get install g++ make cmake git wget libssl-dev libreadline-dev bzip2 libbz2-dev
+        sudo apt-get install build-essential g++ make cmake git wget libssl-dev libreadline-dev bzip2 libbz2-dev
         sudo apt-get install mysql-server mysql-client libmysqlclient-dev libmysql++-dev
         
         sudo apt install gcc-13 g++-13
