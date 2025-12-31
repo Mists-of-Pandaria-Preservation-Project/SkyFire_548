@@ -2,8 +2,7 @@
 
 ## Build Status
 [![windows-build](https://github.com/ProjectSkyfire/SkyFire_548/actions/workflows/windows.yml/badge.svg)](https://github.com/ProjectSkyfire/SkyFire_548/actions/workflows/windows.yml)
-[![GCC11](https://github.com/ProjectSkyfire/SkyFire_548/actions/workflows/gcc11.yml/badge.svg)](https://github.com/ProjectSkyfire/SkyFire_548/actions/workflows/gcc11.yml)
-[![GCC13](https://github.com/ProjectSkyfire/SkyFire_548/actions/workflows/gcc13.yml/badge.svg)](https://github.com/ProjectSkyfire/SkyFire_548/actions/workflows/gcc13.yml)
+[![Clang](https://github.com/ProjectSkyfire/SkyFire_548/actions/workflows/clang.yml/badge.svg)](https://github.com/ProjectSkyfire/SkyFire_548/actions/workflows/clang.yml)
 # [![CodeFactor](https://www.codefactor.io/repository/github/projectskyfire/skyfire_548/badge)](https://www.codefactor.io/repository/github/projectskyfire/skyfire_548)
 # [![Codacy Badge](https://app.codacy.com/project/badge/Grade/57a11392c3ed42dcae439669e893565f)](https://app.codacy.com/gh/ProjectSkyfire/SkyFire_548/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/projectskyfire/skyfire_548/badge)](https://www.codefactor.io/repository/github/projectskyfire/skyfire_548)
