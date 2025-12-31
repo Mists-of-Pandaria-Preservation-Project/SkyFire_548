@@ -970,8 +970,6 @@ void WorldSession::HandleAuctionListPendingSales(WorldPacket& recvData)
 {
     SF_LOG_DEBUG("network", "WORLD: Received CMSG_AUCTION_LIST_PENDING_SALES");
 
-    recvData.read_skip<uint64>();
-
     uint32 count = 0;
 
     WorldPacket data(SMSG_AUCTION_LIST_PENDING_SALES, 4);
