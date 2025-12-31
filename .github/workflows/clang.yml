@@ -14,17 +14,17 @@ on:
       - ready_for_review
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu:26.04
     if: ${{ !github.event.pull_request.draft }}
     steps:
     - uses: actions/checkout@v2
     - name: Dependencies
       run: |
-        sudo apt update
-        sudo apt-get update
+     
+        # G++
         sudo apt-get install g++ make cmake git wget libssl-dev libreadline-dev bzip2 libbz2-dev
         sudo apt-get install mysql-server mysql-client libmysqlclient-dev libmysql++-dev
-        sudo apt-get install libace-dev
+        
         sudo apt install gcc-13 g++-13
         export CXX=g++-13 CC=gcc-13
         
