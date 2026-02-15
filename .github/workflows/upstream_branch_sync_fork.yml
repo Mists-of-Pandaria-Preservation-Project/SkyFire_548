@@ -1,4 +1,4 @@
-name: Sync Fork's Upstream Branch with Upstream's Main/Master Branch
+name: Sync Fork's Upstream Branch with Upstream's Main Branch
 on:
   schedule:
     - cron: '0 6 * * *'  # 6 AM UTC
@@ -9,7 +9,14 @@ jobs:
     permissions:
       contents: write
     steps:
-      - run: gh repo sync $REPOSITORY -b upstream
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPOSITORY: ${{ github.repository }}
+      - uses: actions/checkout@v4
+        with:
+          ref: upstream
+          fetch-depth: 0
+      
+      - name: Sync upstream branch with upstream repo's main
+        run: |
+          git remote add upstream-repo https://github.com/ProjectSkyfire/SkyFire_548.git
+          git fetch upstream-repo main
+          git reset --hard upstream-repo/main
+          git push origin upstream --force
